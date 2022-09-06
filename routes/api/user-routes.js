@@ -10,12 +10,12 @@ const {
 } = require("../../controllers/user-controller");
 
 // Set up GET all and POST at /api/users
-router.route("/").get().post();
+router.route("/").get(getAllUsers).post(addUser);
 
 // Set up GET one, PUT, and DELETE at /api/users/:id
-router.route("/:id").get().put().delete();
+router.route("/:id").get(getUserByID).put(updateUser).delete(deleteUser);
 
 // Set up to PUT on user to add friend to array
-router.route("/:userId/friends/:friendId").post().delete();
+router.route("/:userId/friends/:friendId").post(addFriend).delete(deleteFriend);
 
 module.exports = router;
