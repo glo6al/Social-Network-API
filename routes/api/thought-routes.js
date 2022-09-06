@@ -1,5 +1,13 @@
 const router = require("express").Router();
-const {} = require("../../controllers/thought-controller");
+const {
+  getAllThoughts,
+  getThoughtById,
+  addThought,
+  updateThought,
+  deleteThought,
+  addReaction,
+  deleteReaction,
+} = require("../../controllers/thought-controller");
 
 // Set up GET all and POST at /api/thoughts
 router.route("/").get().post();
