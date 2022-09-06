@@ -1,6 +1,6 @@
-const router = require("express-router").Router();
-const userRoutes = require("user-routes");
-const thoughtRoutes = require("thought-routes");
+const router = require("express").Router();
+const userRoutes = require("./user-routes");
+const thoughtRoutes = require("./thought-routes");
 
 //add middleware
 router.use("/users", userRoutes);
