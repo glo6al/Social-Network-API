@@ -49,7 +49,7 @@ const thoughtController = {
     })
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
-          res.status(404).json({ message: "No thoought with this id found!" });
+          res.status(404).json({ message: "No thought with this id found!" });
           return;
         }
         res.json(dbThoughtData);
@@ -82,7 +82,7 @@ const thoughtController = {
     Thought.findOneAndUpdate(
       { _id: params.thoughtId },
       { $push: { reactions: body } },
-      { new: true, runvalidators: true }
+      { new: true, runValidators: true }
     )
       .then((dbThoughtData) => {
         if (!dbThoughtData) {

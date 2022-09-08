@@ -49,10 +49,14 @@ const userController = {
       .catch((err) => res.status(400).json(err));
   },
   updateUser({ params, body }, res) {
-    User.findOneAndUpdate({ id: params.userId }, body, {
-      new: true,
-      runValidators: true,
-    })
+    User.findOneAndUpdate(
+      { id: params.userId },
+      { $set: body },
+      {
+        new: true,
+        runValidators: true,
+      }
+    )
       .then((dbUserData) => {
         if (!dbUserData) {
           res.status(404).json({ message: "No user found with this id!" });
