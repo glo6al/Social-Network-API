@@ -57,4 +57,6 @@ Email or contact me via GitHub.
 
 **GitHub Repository:** <https://github.com/glo6al/Social_Network_Api>
 
+**Video Walkthrough:** <https://drive.google.com/file/d/1hEVZqCW6h7Zh_Vv38ye63REEdLshtYhD/view>
+
 **Email:** towers.a@gmail.com
